@@ -41,6 +41,12 @@ trabalho_jogo/
     |-- mapa.png
     |-- sprites.png
     |-- sprites_config.png
+    |-- sprites_score.png
+    |-- sprites_shop.png
+    |-- parrot_red.png
+    |-- parrot_yellow.png
+    |-- coin_gold.png
+    |-- logo.jpg
     |-- music.mp3
     `-- sfx_wing.mp3
 ```
@@ -52,6 +58,10 @@ O jogo possui uma tela inicial com botao de play e botao de configuracoes. Para 
 Durante a partida, o passaro pula quando o jogador clica, toca na tela ou usa a tecla espaco/seta para cima. Os obstaculos sao gerados infinitamente, com posicoes aleatorias e abertura controlada para manter o jogo possivel.
 
 Quando ocorre colisao com o chao, teto ou obstaculos, o jogo mostra a tela de Game Over com distancia, tempo, recorde, botao de reiniciar e botao para voltar ao inicio.
+
+O jogo tambem possui sistema de nome de jogador e ranking TOP 10. Os outros jogadores sao simulados pelo proprio JavaScript, com distancias que aumentam aos poucos ate uma meta maxima. A pontuacao do jogador real tambem entra no ranking usando a maior distancia entre o recorde salvo e a distancia da partida atual.
+
+Na tela inicial tambem existe uma loja. O jogador ganha moedas de acordo com a distancia alcancada ao final da partida. Essas moedas podem ser usadas para comprar e equipar personagens: o classico, a arara vermelha e a arara amarela. As moedas, personagens comprados e personagem equipado ficam salvos no navegador.
 
 ## Controles
 
@@ -67,11 +77,16 @@ Quando ocorre colisao com o chao, teto ou obstaculos, o jogo mostra a tela de Ga
 - Tela inicial.
 - Tela de configuracoes.
 - Controle de volume.
+- Loja com personagens compraveis.
+- Sistema de moedas baseado na distancia.
 - Musica de fundo em loop.
 - Som de pulo.
 - Tela de Game Over.
 - Botao para reiniciar.
 - Botao para voltar ao inicio.
+- Nome de jogador salvo no navegador.
+- Ranking TOP 10 com jogadores simulados e limites de pontuacao.
+- Posicao do jogador atualizada em tempo real durante a partida.
 - Recorde salvo no navegador.
 - Compatibilidade com PC e celular.
 
@@ -157,5 +172,11 @@ Os arquivos visuais e sonoros ficam na pasta `assets`. Eles sao carregados local
 - `mapa.png`: imagem de fundo do mapa.
 - `sprites.png`: sprites do personagem, botoes, titulos e obstaculos.
 - `sprites_config.png`: sprite da engrenagem de configuracoes.
+- `sprites_score.png`: sprite usada no painel do ranking TOP 10.
+- `sprites_shop.png`: sprite usada no botao e painel da loja.
+- `parrot_red.png`: spritesheet transparente da arara vermelha.
+- `parrot_yellow.png`: spritesheet transparente da arara amarela.
+- `coin_gold.png`: moeda dourada usada no contador da loja.
+- `logo.jpg`: logo principal exibida na tela inicial.
 - `music.mp3`: musica de fundo.
 - `sfx_wing.mp3`: som do pulo.
